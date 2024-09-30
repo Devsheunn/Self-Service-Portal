@@ -1,0 +1,7 @@
+.inconvenienceAllPage-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  width: 100%;
+}

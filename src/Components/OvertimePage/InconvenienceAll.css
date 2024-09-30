@@ -1,0 +1,165 @@
+.inconvenience-allowance-container {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.inconvenience-allowance-container h1 {
+  font-size: 18px;
+  margin-top: 1rem;
+  /* margin-left: 2rem; */
+}
+
+.tabs {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 45px;
+  font-size: 14px;
+  font-weight: 700;
+  /* border: solid 1px #e5e5e5; */
+  padding: 1rem 0.5rem;
+  border-radius: 8px;
+}
+
+.tab {
+  padding: 0.5rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.active {
+  transition: all 0.2s;
+  background-color: #0c0a09;
+  color: #fefefe;
+}
+
+/* tabo 1 style */
+
+.main {
+  width: 100%;
+}
+
+.history {
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.personal-info-balance * {
+  color: #fefefe;
+}
+
+.personal-info-balance {
+  height: 250px;
+  max-width: 80%;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 24px;
+  background-color: #0c0a09;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.personal-info-balance h2 {
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+}
+
+.personal-info {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #1c1917;
+  border-radius: 24px;
+  height: 150px;
+  padding: 1rem 1.4rem;
+}
+
+.personal-info .profile-pic {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: #e5e5e5;
+  border: solid 3px #e5e5e5;
+}
+
+.personal-info .profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.name-email-department h4 {
+  font-size: 16px;
+  font-size: 300;
+  color: #d6d3d1;
+}
+
+.name-email-department h3 {
+  font-size: 18px;
+  font-size: 500;
+}
+
+.name-email-department p {
+  font-size: 12px;
+  font-size: 200;
+  color: #d6d3d1;
+}
+
+/* Tab 2 style */
+
+.tab-2-content {
+  margin: 1rem 0;
+}
+
+.tab-2-content button {
+  margin: 2rem;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 24px;
+  font-size: 16px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.tab-2-content button:hover {
+  color: #fefefe;
+  background-color: #0c0a09;
+}
+
+/* media queries */
+
+@media (max-width: 620px) {
+  .inconvenience-allowance-container {
+    padding: 1rem 1rem;
+  }
+
+  .inconvenience-allowance-container h1 {
+    font-size: 16px;
+  }
+
+  .tab {
+    width: 50%;
+    text-align: center;
+  }
+
+  .personal-info-balance {
+    height: 250px;
+    max-width: 80%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 24px;
+    background-color: #0c0a09;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+}

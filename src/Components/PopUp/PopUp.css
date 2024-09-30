@@ -1,0 +1,58 @@
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1500;
+}
+
+.pop-up-card {
+  background-color: #fefefe;
+  width: 300px;
+  height: 120px;
+  padding: 1rem;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  border-radius: 12px;
+}
+
+.pop-up-card h1 {
+  font-size: 18px;
+}
+
+.pop-up .btns {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.pop-up .btns button {
+  width: 80px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fefefe;
+  border-radius: 5px;
+}
+
+.yes {
+  background-color: rgb(128, 214, 8);
+  opacity: 0.8;
+}
+
+.no {
+  background-color: #f12c26;
+  opacity: 0.9;
+}
+
+.yes:hover,
+.no:hover {
+  opacity: 1;
+}

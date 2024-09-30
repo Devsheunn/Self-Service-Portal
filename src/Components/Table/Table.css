@@ -1,0 +1,42 @@
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.table-container {
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+
+.table-container * {
+  font-size: 12px;
+}
+
+/* status style */
+.status div {
+  width: 100px;
+  color: #fefefe;
+  padding: 0.3rem 0.5rem 0.4rem 0.5rem;
+  border-radius: 16px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.iscomplete div {
+  background-color: green;
+}
+
+.in-progress div {
+  background-color: #222222;
+}
+
+.declined div {
+  background-color: rgb(143, 240, 151);
+}
+
+.rdt_TableHeader div {
+  font-size: 28px;
+  font-weight: 700;
+}

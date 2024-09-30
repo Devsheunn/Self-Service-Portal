@@ -1,0 +1,85 @@
+.allowance-form {
+  padding-top: 1rem;
+  flex-grow: 1;
+}
+
+.form-container h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.form-main {
+  margin-top: 1rem;
+  background-color: #fefefe;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-height: calc(100vh - 12rem);
+  overflow-y: auto;
+}
+
+.current {
+  display: inline-flex;
+  gap: 0.1rem;
+}
+
+.current img {
+  width: 18px;
+}
+
+.current h2 {
+  font-size: 16px;
+}
+
+.form-main p {
+  margin: 1rem 0;
+}
+
+.form-container label {
+  display: block;
+  margin: 0.2rem 0;
+}
+
+.form-container input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+.form-container input,
+textarea,
+select,
+button {
+  width: 400px;
+  padding: 0.5rem;
+  font-size: 16px;
+  border: solid 1px #e5e5e5;
+  border-radius: 8px;
+}
+
+textarea {
+  width: 600px;
+  height: 200px;
+}
+
+.form-container select {
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+.form-container .btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 0 0;
+}
+
+.form-container .btn {
+  width: 150px;
+  border: none;
+  background-color: #f12c26;
+  color: #fefefe;
+  cursor: pointer;
+}

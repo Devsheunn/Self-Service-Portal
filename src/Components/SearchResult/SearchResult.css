@@ -1,0 +1,35 @@
+.search-result-container {
+  position: absolute;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #fefefe;
+  left: 0;
+  top: 100%;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.searched-employee {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.no-result {
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.searched-employee:hover {
+  background-color: #f12c26;
+}
+
+.searched-employee:hover * {
+  color: white;
+}
+
+.searched-employee img {
+  width: 20px;
+}

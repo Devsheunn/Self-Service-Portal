@@ -1,0 +1,44 @@
+.SelectedEmployees-container {
+  margin-top: 2rem;
+}
+
+.SelectedEmployees-container h1 {
+  margin-bottom: 1rem;
+}
+
+.employee-job-details {
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: solid 3px #f12c26;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.delete-edit-icon {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.employee-job-details img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.trash {
+  stroke: red;
+}
+
+.employee-job-details p {
+  font-size: 16px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.employee-job-details .dates {
+  font-weight: 400;
+  font-size: 14px;
+}
