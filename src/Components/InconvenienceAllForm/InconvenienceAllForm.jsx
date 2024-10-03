@@ -27,6 +27,10 @@ const InconvenienceAllForm = () => {
     navID,
     setNavID,
     arrayToPost,
+    popUp,
+    setPopUp,
+    option,
+    setOption,
   } = useContext(FormContext);
   const navigate = useNavigate();
 

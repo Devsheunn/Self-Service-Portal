@@ -14,7 +14,7 @@ import FetchData from "../FetchData";
 const InconvenienceAll = () => {
   const navigate = useNavigate();
   const { data, setData, isPending, setIsPending } = useContext(FormContext);
-  const { user } = useContext(AuthContext);
+  const { user, setActiveLink } = useContext(AuthContext);
   const [error, setError] = useState(null);
   const [toggleTabs, setToggleTabs] = useState(1);
   const [isMyAccoount, setIsMyAccount] = useState(true);
@@ -160,6 +160,7 @@ const InconvenienceAll = () => {
   // }, []);
 
   useEffect(() => {
+    setActiveLink(2);
     const fetchAllData = async () => {
       console.log("fetalldata started");
       setIsPending(true);

@@ -18,6 +18,9 @@ export const AuthProvider = ({ children }) => {
   const [ispreview, setIsPreview] = useState(false);
   const [selectedEmployeesTemp2, setSelectedEmployeesTemp2] = useState([]);
   const [causeReRender, setCauseReRender] = useState(false);
+  const [activeLink, setActiveLink] = useState(1);
+
+  console.log(user);
 
   const handleErrorToast = message => {
     toast.error(message);
@@ -52,6 +55,8 @@ export const AuthProvider = ({ children }) => {
         setCauseReRender,
         handleErrorToast,
         handleSuccessToast,
+        activeLink,
+        setActiveLink,
       }}
     >
       {children}

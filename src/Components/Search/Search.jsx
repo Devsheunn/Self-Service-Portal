@@ -109,7 +109,6 @@ const Search = ({ selectedEmployeesTemp }) => {
         <div className="initial-selectOnSearch">
           {selectedEmployeesTemp?.length > 0 ? (
             selectedEmployeesTemp.map((item, i) => {
-              console.log(item.id);
               return (
                 <>
                   <div key={i} className="name-calender">

@@ -9,12 +9,13 @@ const Header = () => {
   const [accountVisible, setAccountVisible] = useState(false);
   const sectionRefs = useRef([]);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { setUser } = useContext(AuthContext);
+  const { setUser, activeLink, setActiveLink } = useContext(AuthContext);
   const navigate = useNavigate();
 
   // Functions
 
   useEffect(() => {
+    setActiveLink(1);
     const handleIsScrolled = () => {
       if (window.scrollY > 30) {
         setIsScrolled(true);
@@ -58,24 +59,40 @@ const Header = () => {
         <nav className="nav">
           <ul>
             <li>
-              <Link className="link active-link" to={"/homePage"}>
+              <Link
+                className={activeLink === 1 ? "link active-link" : "link"}
+                to={"/homePage"}
+                onClick={e => setActiveLink(1)}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link className="link" to={"/inconvenience-allowance"}>
+              <Link
+                className={activeLink === 2 ? "link active-link" : "link"}
+                to={"/inconvenience-allowance"}
+                onClick={e => setActiveLink(2)}
+              >
                 Inconvinience Allowance
               </Link>
             </li>
             <li>
-              <Link className="link" to={"/homePage"}>
-                About Us
+              <Link
+                className={activeLink === 3 ? "link active-link" : "link"}
+                to={"/homePage"}
+                onClick={e => setActiveLink(3)}
+              >
+                CBA
               </Link>
             </li>
             <li>
-              <Link className="link" to={"/homePage"}>
+              <Link
+                className={activeLink === 4 ? "link active-link" : "link"}
+                to={"/homePage"}
+                onClick={e => setActiveLink(4)}
+              >
                 {" "}
-                Contact Us
+                Change Password
               </Link>
             </li>
           </ul>
@@ -88,28 +105,37 @@ const Header = () => {
           </div>
         </nav>
         {accountVisible ? (
-          <div className="account-dropdown">
-            <div className="account-info">
-              <div className="profile-pic">
-                {user && user?.first_name.charAt(0)}
+          <div
+            className="account-dropdown-overlay"
+            onClick={e => {
+              if (e.target.classList.contains("account-dropdown-overlay")) {
+                setAccountVisible(false);
+              }
+            }}
+          >
+            <div className="account-dropdown">
+              <div className="account-info">
+                <div className="profile-pic">
+                  {user && user?.first_name.charAt(0)}
+                </div>
+                <p className="account-name">
+                  {user?.first_name} {user?.last_name}
+                </p>
+                <p className="account-mail">{user?.email}</p>
               </div>
-              <p className="account-name">
-                {user?.first_name} {user?.last_name}
-              </p>
-              <p className="account-mail">{user?.email}</p>
-            </div>
-            <div className="account-features">
-              <div className="theme">
-                <img src={assets.settingsIcon} alt="theme icon" />
-                <p>Theme(inprogress)</p>
-              </div>
-              <div className="settings">
-                <img src={assets.settingsIcon} alt="settings icon" />
-                <p>Settings</p>
-              </div>
-              <div onClick={() => logOut()} className="log-out">
-                <img src={assets.logOutIcon} alt="log-out icon" />
-                <p onClick={() => logOut()}>Log Out</p>
+              <div className="account-features">
+                <div className="theme">
+                  <img src={assets.settingsIcon} alt="theme icon" />
+                  <p>Theme(inprogress)</p>
+                </div>
+                <div className="settings">
+                  <img src={assets.settingsIcon} alt="settings icon" />
+                  <p>Settings</p>
+                </div>
+                <div onClick={() => logOut()} className="log-out">
+                  <img src={assets.logOutIcon} alt="log-out icon" />
+                  <p onClick={() => logOut()}>Log Out</p>
+                </div>
               </div>
             </div>
           </div>

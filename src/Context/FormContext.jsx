@@ -25,7 +25,7 @@ const FormContextProvider = props => {
   const fetchData = FetchData();
   const [datatoEdit, setDatatoEdit] = useState({});
   const [isEdit, setIsEdit] = useState(false);
-  const [popUp, setPopUp] = useState(true);
+  const [popUp, setPopUp] = useState(false);
   const [option, setOption] = useState(null);
 
   const {
@@ -59,6 +59,10 @@ const FormContextProvider = props => {
     setSelectedEmployeesTemp(prev => prev.filter(item => item.id !== dataId));
   };
 
+  const notifySuccess = message => {
+    toast.success(message);
+  };
+
   const handleCreate = async e => {
     e.preventDefault();
   };
@@ -83,10 +87,6 @@ const FormContextProvider = props => {
     } finally {
       setIsLoading(false);
     }
-  };
-
-  const notifySuccess = message => {
-    toast.success(message);
   };
 
   const handleStagePost = async num => {
@@ -180,6 +180,7 @@ const FormContextProvider = props => {
     setPopUp,
     option,
     setOption,
+    notifySuccess,
   };
 
   return (

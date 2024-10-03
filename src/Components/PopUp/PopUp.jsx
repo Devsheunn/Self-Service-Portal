@@ -3,11 +3,18 @@ import "./PopUp.css";
 import { FormContext } from "../../Context/FormContext";
 
 const PopUp1 = ({ handleUpdate }) => {
-  const { handleReverse, handleAprove, currentStage, option, setOption } =
-    useContext(FormContext);
+  const {
+    handleReverse,
+    handleAprove,
+    currentStage,
+    option,
+    setOption,
+    popUp,
+    setPopUp,
+  } = useContext(FormContext);
 
   return (
-    <div className="pop-up">
+    <div className="pop-up" onClick={() => setPopUp(false)}>
       <div className="pop-up-card">
         <h1>Are You Sure?</h1>
         <div className="btns">
@@ -26,7 +33,15 @@ const PopUp1 = ({ handleUpdate }) => {
               Yes
             </button>
           )}
-          <button className="no">No</button>
+          <button
+            className="no"
+            onClick={e => {
+              e.preventDefault();
+              setPopUp(false);
+            }}
+          >
+            No
+          </button>
         </div>
       </div>
     </div>

@@ -84,12 +84,6 @@
   gap: 2rem;
 }
 
-@media (max-width: 830px) {
-  .section--2 {
-    padding: 0 2rem;
-  }
-}
-
 .section--2 img {
   width: 40px;
 }
@@ -168,3 +162,17 @@
   width: 15px;
   cursor: pointer;
 }
+
+/* 830px below */
+
+@media (max-width: 830px) {
+  .section--2 {
+    padding: 2rem;
+  }
+
+  .section--3 {
+    margin-top: 2rem;
+  }
+}
+
+/* 694px */

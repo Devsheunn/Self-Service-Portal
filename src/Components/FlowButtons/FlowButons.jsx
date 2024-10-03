@@ -17,7 +17,8 @@ const FlowButons = () => {
     const HR = ["Employees", "HR"];
     const EM = ["Employees"];
     const arraysEqual = (arr1, arr2) => {
-      return JSON.stringify(arr1) === JSON.stringify(arr2);
+      console.log(JSON.stringify(arr1?.sort()) == JSON.stringify(arr2?.sort()));
+      return JSON.stringify(arr1?.sort()) === JSON.stringify(arr2?.sort());
     };
 
     if (arraysEqual(roles, DR)) return "DR";
@@ -80,6 +81,7 @@ const DeptRep = ({ status }) => {
           <button
             className="btn"
             onClick={e => {
+              e.preventDefault();
               setOption(1);
               setPopUp(true);
             }}
@@ -137,6 +139,7 @@ const LineManager = ({ status }) => {
             className="btn"
             type="add"
             onClick={e => {
+              e.preventDefault();
               setOption(2);
               setPopUp(true);
               navigate(`/inconvenience-allowance`);
@@ -147,6 +150,7 @@ const LineManager = ({ status }) => {
           <button
             className="btn"
             onClick={e => {
+              e.preventDefault();
               setOption(1);
               setPopUp(true);
             }}
@@ -170,6 +174,7 @@ const LineManager = ({ status }) => {
           <button
             className="btn"
             onClick={e => {
+              e.preventDefault();
               setOption(1);
               setPopUp(true);
             }}
@@ -186,7 +191,8 @@ const LineManager = ({ status }) => {
 };
 
 const HRView = ({ status }) => {
-  const { handleReverse, handleAprove, currentStage } = useContext(FormContext);
+  const { handleReverse, handleAprove, currentStage, setPopUp, setOption } =
+    useContext(FormContext);
 
   return (
     <div className="btns">
@@ -199,7 +205,14 @@ const HRView = ({ status }) => {
           <button className="btn" type="add">
             Reject
           </button>
-          <button className="btn" onClick={e => handleAprove(e)}>
+          <button
+            className="btn"
+            onClick={e => {
+              e.preventDefault();
+              setOption(1);
+              setPopUp(true);
+            }}
+          >
             Approve
           </button>
         </>

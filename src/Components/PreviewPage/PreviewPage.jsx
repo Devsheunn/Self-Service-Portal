@@ -12,6 +12,7 @@ import AuthContext from "../../Context/AuthContext";
 import FetchData from "../FetchData";
 import "./PreviewPage.css";
 import PopUp from "../PopUp/PopUp";
+import PopUp1 from "../PopUp/PopUp";
 
 const PreviewPage = () => {
   const fetchData = FetchData();
@@ -108,7 +109,7 @@ const PreviewPage = () => {
       <Header />
       <div className="inconvenienceAllPage-container preview">
         <StatusBar isPreview={isPreview} />
-        {popUp && <PopUp />}
+        {popUp && <PopUp1 />}
         {!isLoading ? (
           <div className="allowance-form">
             <div className="form-container">

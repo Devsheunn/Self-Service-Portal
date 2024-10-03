@@ -12,6 +12,7 @@ import AuthContext from "../../Context/AuthContext";
 import FetchData from "../FetchData";
 import Search from "../Search/Search";
 import useAxiosPrivate from "../../Hooks/usePrivateAxios";
+import PopUp1 from "../PopUp/PopUp";
 
 const EditPage = () => {
   const fetchData = FetchData();
@@ -38,6 +39,11 @@ const EditPage = () => {
     setDatatoEdit,
     fetchPreviewData,
     arrayToPost,
+    popUp,
+    setPopUp,
+    option,
+    setOption,
+    notifySuccess,
   } = useContext(FormContext);
 
   const {
@@ -91,6 +97,7 @@ const EditPage = () => {
 
       // const id = await asyncReturnTwo(); // Await the async function
       navigate(`/inconvenience-allowance/${paramID}`);
+      notifySuccess("Successful");
     } catch (error) {
       console.log(error);
     } finally {
@@ -147,6 +154,7 @@ const EditPage = () => {
     <>
       <Header />
       <Search selectedEmployeesTemp={selectedEmployeesTemp} />
+      {popUp && <PopUp1 handleUpdate={handleUpdate} />}
       <div className="inconvenienceAllPage-container">
         <StatusBar isPreview={isPreview} />
         {!isLoading ? (
@@ -204,7 +212,9 @@ const EditPage = () => {
                       className="btn"
                       // type="submit"
                       onClick={e => {
-                        handleUpdate(e);
+                        e.preventDefault();
+                        setOption(3);
+                        setPopUp(true);
                       }}
                     >
                       Update
